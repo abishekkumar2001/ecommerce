@@ -27,7 +27,6 @@ public class JwtService {
         return Keys.hmacShaKeyFor(secretKey.getBytes());
     }
 
-    // Generate JWT token
     public String generateToken(String username) {
         return Jwts.builder()
                 .setSubject(username)
